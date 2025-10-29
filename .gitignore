@@ -1,0 +1,34 @@
+# Environnements virtuels
+venv/
+.env/
+.venv/
+env*/
+env_headreckoning/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+
+# Données lourdes / modèles (garde-les hors du repo ou en LFS)
+models/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+*.tflite
+*.npz
+
+# Notebooks & artefacts
+.ipynb_checkpoints/
+*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
