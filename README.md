@@ -5,7 +5,7 @@ L’objectif est de combiner des techniques de Computer Vision et de Deep Learni
 
 🚀 Fonctionnalités
 
-🎯 Détection de visage en temps réel à partir d’une caméra ou d’une vidéo.
+🎯 Détection de visage en temps réel à partir d’une caméra.
 
 🧩 Tracking multi-visages : suivi continu des visages détectés à travers les frames.
 
