@@ -1,0 +1,10 @@
+# === Core scientific tools ===
+numpy
+pandas
+matplotlib
+scikit-learn
+tqdm
+
+# === Computer Vision & Tracking ===
+opencv-contrib-python     # Fournit cv2 + modules avancés
+mediapipe                 # Détection / tracking de visages
