@@ -8,3 +8,8 @@ tqdm
 # === Computer Vision & Tracking ===
 opencv-contrib-python     # Fournit cv2 + modules avancés
 mediapipe                 # Détection / tracking de visages
+
+# === IA ====
+transformers
+torch
+tim
