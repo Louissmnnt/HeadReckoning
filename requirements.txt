@@ -13,3 +13,7 @@ mediapipe                 # Détection / tracking de visages
 transformers
 torch
 tim
+
+
+# === Autres ===
+requests
