@@ -15,7 +15,7 @@ model = AutoModelForObjectDetection.from_pretrained("facebook/detr-resnet-50")
 
 # --- Exemple d'image à tester ---
 # 📁 Ouvre une image locale (remplace le chemin par le tien)
-image = Image.open("data/images/cuisine.jpg")
+image = Image.open("data/images/salon.png")
 
 
 # --- Préparation de l'image ---
@@ -45,5 +45,3 @@ for score, label, box in zip(results["scores"], results["labels"], results["boxe
 
 plt.axis("off")
 plt.show()
-
-image.save("data/images/résultats_shapereckoning.jpg")       # Sauvegarde au format JPEG

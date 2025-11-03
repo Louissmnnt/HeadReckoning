@@ -12,7 +12,7 @@ mediapipe                 # Détection / tracking de visages
 # === IA ====
 transformers
 torch
-tim
+timm
 
 
 # === Autres ===
