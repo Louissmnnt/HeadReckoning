@@ -1,23 +1,26 @@
 import cv2
 import numpy as np
 
-# Charger une image
+# Charger l'image
 image = cv2.imread("data/images/visage_feminin.jpg")
+
+# Convertir en niveaux de gris
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-# Flou pour réduire le bruit
-blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+# Binariser (seuil automatique)
+_, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 
-# Détection de contours avec Canny
-edges = cv2.Canny(blurred, 50, 150)
+# Trouver les contours extérieurs
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-# Trouver les contours
-contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+# Créer une image vide pour dessiner les contours
+contour_image = np.zeros_like(image)
 
-# Dessiner les contours sur une copie de l’image originale
-result = image.copy()
-cv2.drawContours(result, contours, -1, (0, 255, 0), 2)
+# Dessiner les contours en vert
+cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 2)
 
-cv2.imshow("Contours", result)
+# Afficher les résultats
+cv2.imshow("Original", image)
+cv2.imshow("Contours Exterieurs", contour_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
